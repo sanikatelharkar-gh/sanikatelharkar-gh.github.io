@@ -22,7 +22,7 @@
     --text-muted: rgba(28,26,23,0.45);
     --text-mid: rgba(28,26,23,0.65);
     --panel-bg: #F0EBE2;
-  }
+}
 
   html { scroll-behavior: smooth; }
 
@@ -33,7 +33,7 @@
     font-weight: 300;
     overflow-x: hidden;
     cursor: none;
-  }
+}
 
   /* Custom cursor */
   .cursor {
@@ -44,7 +44,7 @@
     pointer-events: none;
     z-index: 9999;
     transition: transform 0.1s ease;
-  }
+}
   .cursor-ring {
     position: fixed;
     width: 32px; height: 32px;
@@ -53,7 +53,7 @@
     pointer-events: none;
     z-index: 9998;
     transition: all 0.2s ease;
-  }
+}
 
   /* Nav */
   nav {
@@ -61,24 +61,24 @@
     z-index: 100;
     padding: 1.5rem 3rem;
     display: flex; justify-content: space-between; align-items: center;
-  }
+}
   nav::before {
     content: '';
     position: absolute; inset: 0;
     background: linear-gradient(to bottom, rgba(250,247,242,0.95) 0%, transparent 100%);
     pointer-events: none;
-  }
+}
   .nav-logo {
     font-family: 'Space Mono', monospace;
     font-size: 11px; letter-spacing: 0.2em;
     color: var(--accent-gold); text-transform: uppercase;
     position: relative;
-  }
+}
   .nav-links { display: flex; gap: 2.5rem; list-style: none; position: relative; }
   .nav-links a {
     font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--text-mid); text-decoration: none; transition: color 0.3s;
-  }
+}
   .nav-links a:hover { color: var(--ink); }
 
   /* Hero — split grid */
@@ -86,7 +86,7 @@
     min-height: 100vh;
     display: grid; grid-template-columns: 1fr 1fr;
     position: relative; overflow: hidden;
-  }
+}
 .hero-left {
   padding: 6rem 3rem 3rem;
 }
@@ -96,98 +96,101 @@
     color: var(--accent-gold); text-transform: uppercase;
     margin-bottom: 2rem;
     opacity: 0; animation: fadeUp 1s 0.3s forwards;
-  }
+}
   .hero-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(4rem, 7vw, 7rem);
     font-weight: 300; line-height: 0.95; letter-spacing: -0.02em;
     opacity: 0; animation: fadeUp 1s 0.5s forwards;
-  }
+}
   .hero-name em { font-style: italic; color: var(--accent-gold); }
   .hero-desc {
     margin-top: 2.5rem; font-size: 14px; line-height: 1.8;
     color: var(--text-mid); max-width: 400px;
     opacity: 0; animation: fadeUp 1s 0.7s forwards;
-  }
+}
   .hero-tags {
     display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem;
     opacity: 0; animation: fadeUp 1s 0.9s forwards;
-  }
+}
   .tag {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.15em; text-transform: uppercase;
     padding: 0.4rem 0.8rem;
     border: 0.5px solid var(--border-light);
     color: var(--text-mid); border-radius: 2px;
-  }
+}
   .hero-right { position: relative; overflow: hidden; }
   .hero-visual {
     position: absolute; inset: 0;
     background: #FFFFFF;
     display: flex; align-items: center; justify-content: center; overflow: hidden;
-  }
+    height: 100%;
+}
+/*
   .hero-grid-pattern {
     position: absolute; inset: 0; opacity: 0.1;
     background-image:
       linear-gradient(rgba(250,235,200,0.6) 1px, transparent 1px),
       linear-gradient(90deg, rgba(250,235,200,0.6) 1px, transparent 1px);
     background-size: 40px 40px;
-  }
+}
   .hero-circle {
     width: 280px; height: 280px;
     border-radius: 50%;
     border: 1px solid rgba(212,168,75,0.2);
     position: absolute; animation: rotate 20s linear infinite;
-  }
+}
   .hero-circle::before {
     content: '';
     position: absolute; top: -4px; left: 50%;
     width: 8px; height: 8px;
     border-radius: 50%; background: var(--accent-gold);
     transform: translateX(-50%);
-  }
+}
   .hero-circle-2 {
     width: 420px; height: 420px;
     animation-duration: 35s; animation-direction: reverse;
-  }
+}
   .hero-center-text {
     font-family: 'Cormorant Garamond', serif;
     font-size: 10rem; font-weight: 300;
     color: rgba(212,168,75,0.06);
     user-select: none; line-height: 1; position: absolute;
-  }
+}
+*/
   .hero-badge {
     position: absolute; bottom: 3rem; right: 3rem; text-align: right;
-  }
+}
   .hero-badge p {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.2em; color: rgba(212,168,75,0.5);
     text-transform: uppercase; line-height: 2;
-  }
+}
   .scroll-indicator {
     position: absolute; bottom: 3rem; left: 3rem;
     display: flex; align-items: center; gap: 1rem;
     opacity: 0; animation: fadeUp 1s 1.2s forwards;
-  }
+}
   .scroll-line {
     width: 40px; height: 1px; background: var(--accent-gold);
     position: relative; overflow: hidden;
-  }
+}
   .scroll-line::after {
     content: ''; position: absolute; inset: 0;
     background: var(--ink); animation: scanLine 2s ease-in-out infinite;
-  }
+}
   .scroll-text {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
-  }
+}
 
   /* About strip */
   .about-strip {
     border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);
     padding: 3rem;
     display: grid; grid-template-columns: 1fr 2px 1fr 2px 1fr;
-  }
+}
   .strip-item { padding: 1rem 2.5rem; }
   .strip-item:first-child { padding-left: 0; }
   .strip-divider { background: var(--border); align-self: stretch; }
@@ -195,27 +198,27 @@
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--accent-gold); margin-bottom: 0.75rem;
-  }
+}
   .strip-value {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.6rem; font-weight: 300; line-height: 1.2;
-  }
+}
 
   /* Marquee */
   .marquee-strip {
     border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);
     padding: 1.25rem 0; overflow: hidden; display: flex;
-  }
+}
   .marquee-inner {
     display: flex; gap: 0;
     animation: marquee 30s linear infinite; white-space: nowrap;
-  }
+}
   .marquee-item {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem; font-style: italic;
     color: rgba(28,26,23,0.22);
     padding: 0 3rem; display: flex; align-items: center; gap: 2rem;
-  }
+}
   .marquee-dot { width: 4px; height: 4px; background: var(--accent-gold); border-radius: 50%; }
 
   /* Section commons */
@@ -224,21 +227,21 @@
     display: flex; justify-content: space-between; align-items: flex-end;
     margin-bottom: 4rem;
     border-bottom: 0.5px solid var(--border); padding-bottom: 2rem;
-  }
+}
   .section-number {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.3em; color: var(--accent-gold); text-transform: uppercase;
-  }
+}
   .section-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; letter-spacing: -0.01em;
-  }
+}
   .section-title em { font-style: italic; color: var(--accent-gold); }
   .section-count {
     font-family: 'Cormorant Garamond', serif;
     font-size: 5rem; font-weight: 300;
     color: rgba(28,26,23,0.05); line-height: 1;
-  }
+}
 
   /* Brand overview blocks */
   .overview-section { padding: 6rem 3rem; }
@@ -246,65 +249,78 @@
   .brand-hero-row {
     display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
     margin-bottom: 4rem; align-items: start;
-  }
+}
   .brand-eyebrow {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.25em; text-transform: uppercase;
     color: var(--accent-gold); margin-bottom: 1rem;
-  }
+}
   .brand-headline {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.4rem; font-weight: 300; line-height: 1.15; letter-spacing: -0.01em;
     margin-bottom: 1.5rem;
-  }
+}
   .brand-headline em { font-style: italic; color: var(--accent-gold); }
   .brand-body {
     font-size: 14px; line-height: 1.85; color: var(--text-mid);
-  }
+}
   .highlight-line { width: 40px; height: 2px; background: var(--accent-gold); margin-bottom: 1.5rem; }
 
   /* Timeline */
   .timeline {
     display: flex; gap: 0; margin-top: 2rem;
     border: 0.5px solid var(--border);
-  }
+}
   .timeline-item {
     flex: 1; padding: 1.5rem; border-right: 0.5px solid var(--border);
     position: relative;
-  }
+}
   .timeline-item:last-child { border-right: none; }
   .timeline-year {
     font-family: 'Space Mono', monospace; font-size: 10px;
     letter-spacing: 0.15em; color: var(--accent-gold);
     margin-bottom: 0.5rem;
-  }
+}
   .timeline-text { font-size: 12px; line-height: 1.7; color: var(--text-mid); }
   .timeline-dot {
     width: 6px; height: 6px; border-radius: 50%;
     background: var(--accent-gold); margin-bottom: 0.75rem;
-  }
+}
 
   /* Stat row */
   .stat-row {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 3rem 0;
-  }
+}
+
+.stat-row.full-width {
+  position: relative;
+
+  left: 50%;
+  right: 50%;
+
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  width: 100vw;
+}
+
   .stat-box {
     background: var(--panel-bg); border: 0.5px solid var(--border);
     padding: 1.5rem; position: relative; overflow: hidden;
-  }
+}
   .stat-box::after {
     content: ''; position: absolute; bottom: 0; left: 0; right: 0;
     height: 2px; background: var(--accent-gold);
-  }
+}
   .stat-label {
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--warm-gray); margin-bottom: 0.6rem;
-  }
+}
   .stat-value {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2rem; font-weight: 300; color: var(--accent-green); line-height: 1.1;
-  }
+}
   .stat-sub { font-size: 11px; color: var(--text-muted); margin-top: 0.25rem; }
 
   /* Analysis cards — collapsible */
@@ -315,12 +331,12 @@
     display: grid; grid-template-columns: 80px 1fr auto;
     align-items: stretch; transition: all 0.4s ease;
     cursor: pointer; position: relative; overflow: hidden;
-  }
+}
   .analysis-card::before {
     content: ''; position: absolute; left: 0; top: 0; bottom: 0;
     width: 0; background: #3B2A14;
     transition: width 0.5s cubic-bezier(0.4,0,0.2,1); z-index: 0;
-  }
+}
   .analysis-card:hover::before { width: 100%; }
   .analysis-card:hover { border-color: #3B2A14; }
 
@@ -328,12 +344,12 @@
     padding: 2rem; border-right: 0.5px solid var(--border);
     display: flex; align-items: center; justify-content: center;
     position: relative; z-index: 1;
-  }
+}
   .card-index span {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.5rem; font-weight: 300;
     color: rgba(28,26,23,0.12); transition: color 0.4s;
-  }
+}
   .analysis-card:hover .card-index span { color: rgba(250,235,200,0.4); }
 
   .card-content { padding: 2.5rem 3rem; position: relative; z-index: 1; }
@@ -341,55 +357,55 @@
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--accent-gold); margin-bottom: 0.75rem; transition: color 0.4s;
-  }
+}
   .analysis-card:hover .card-category { color: rgba(212,168,75,0.7); }
   .card-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2rem; font-weight: 300; letter-spacing: -0.01em;
     margin-bottom: 0.75rem; transition: color 0.4s;
-  }
+}
   .analysis-card:hover .card-title { color: rgba(250,235,200,0.9); }
   .card-desc {
     font-size: 13px; line-height: 1.7; color: var(--text-mid);
     max-width: 540px; transition: color 0.4s;
-  }
+}
   .analysis-card:hover .card-desc { color: rgba(250,235,200,0.7); }
   .card-pills {
     display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.25rem;
-  }
+}
   .pill {
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.1em; text-transform: uppercase;
     padding: 0.25rem 0.6rem;
     border: 0.5px solid var(--border-light);
     border-radius: 1px; color: var(--text-mid); transition: all 0.4s;
-  }
+}
   .analysis-card:hover .pill {
     border-color: rgba(250,235,200,0.2); color: rgba(250,235,200,0.65);
-  }
+}
   .card-arrow {
     padding: 2.5rem; display: flex; align-items: center; justify-content: center;
     border-left: 0.5px solid var(--border); position: relative; z-index: 1;
-  }
+}
   .arrow-icon {
     width: 40px; height: 40px;
     border: 0.5px solid var(--border-light); border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     transition: all 0.4s; font-size: 16px;
-  }
+}
   .analysis-card:hover .arrow-icon {
     border-color: rgba(250,235,200,0.4);
     background: rgba(250,235,200,0.1);
     color: rgba(250,235,200,0.9);
     transform: rotate(45deg);
-  }
+}
 
   /* Detail panels */
   .card-detail {
     display: none; background: var(--panel-bg);
     border: 0.5px solid var(--border); border-top: none;
     padding: 4rem 3rem; margin-bottom: 2px;
-  }
+}
   .card-detail.open { display: block; }
 
   .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
@@ -399,7 +415,7 @@
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.25em; text-transform: uppercase;
     color: var(--accent-gold); margin-bottom: 1.25rem;
-  }
+}
   .detail-body { font-size: 13px; line-height: 1.85; color: var(--text-mid); }
   .detail-body + .detail-body { margin-top: 1rem; }
 
@@ -408,30 +424,30 @@
     padding: 0.65rem 0; border-bottom: 0.5px solid var(--border);
     font-size: 13px; color: var(--text-mid);
     display: flex; align-items: flex-start; gap: 0.75rem; line-height: 1.5;
-  }
+}
   .item-list li::before {
     content: ''; width: 4px; height: 4px; border-radius: 50%;
     background: var(--accent-gold); flex-shrink: 0; margin-top: 6px;
-  }
+}
 
   /* Score card */
   .score-card {
     background: #FAF7F2; border: 0.5px solid var(--border);
     padding: 1.5rem; text-align: center; position: relative; overflow: hidden;
-  }
+}
   .score-card::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
     background: var(--accent-gold);
-  }
+}
   .score-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3rem; font-weight: 300; color: var(--accent-green); line-height: 1;
-  }
+}
   .score-label {
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--warm-gray); margin-top: 0.5rem;
-  }
+}
   .score-interp { font-size: 12px; color: var(--text-mid); margin-top: 0.5rem; line-height: 1.5; }
 
   /* Matrix tables */
@@ -441,11 +457,11 @@
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--accent-gold); padding: 0.6rem 0.8rem;
     text-align: left; border-bottom: 0.5px solid var(--border);
-  }
+}
   .matrix-table td {
     padding: 0.6rem 0.8rem; border-bottom: 0.5px solid rgba(28,26,23,0.05);
     color: var(--text-mid); vertical-align: top;
-  }
+}
   .matrix-table tr:last-child td { border-bottom: none; font-weight: 400; }
   .val-good { color: #2D6B3E; }
   .val-warn { color: #A87028; }
@@ -455,11 +471,11 @@
   .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 1.5rem; }
   .swot-cell {
     padding: 1.5rem; border: 0.5px solid var(--border); background: #FAF7F2;
-  }
+}
   .swot-cell-title {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;
-  }
+}
   .swot-s { color: #2D6B3E; }
   .swot-w { color: #A33030; }
   .swot-o { color: var(--accent-gold); }
@@ -469,7 +485,7 @@
   /* Images and Image Blocks */
 
   .image-block {
-  padding: 2.5rem -2.5rem;
+  padding: 2.5rem 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,43 +505,41 @@
     0 5px 20px rgba(0,0,0,0.08);
 }
 
-.image-full {
-  margin: 2.5rem -2rem; /* 🔥 breaks out of padding */
-}
-
 .image-full img {
   width: 100%;
   height: auto;
   display: block;
-
   border-top: 0.5px solid var(--border);
   border-bottom: 0.5px solid var(--border);
-}
-
-.image-full img {
   box-shadow: 0 15px 50px rgba(0,0,0,0.1);
 }
 
 /* Hero - Right */
 
 .hero-logo-container {
+
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--panel-bg); /* or keep dark if you prefer contrast */
+  overflow: hidden;
+  background: #FFFFFF; 
 }
 
 .hero-logo-container img {
-  max-width: 260px;
-  width: 60%;
+  max-width: 70%; /* 260px; */
+  max-height: 70%;
+  width: auto;
   height: auto;
   object-fit: contain;
-  opacity: 0.9;
+  opacity: 1.0;
 }
 
-}
 
 
 /* Contact */
@@ -570,19 +584,19 @@
   /* Five forces visual */
   .forces-grid {
     display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin-top: 1.5rem;
-  }
+}
   .force-cell {
     padding: 1.25rem; border: 0.5px solid var(--border); background: #FAF7F2;
-  }
+}
   .force-name {
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--warm-gray); margin-bottom: 0.4rem;
-  }
+}
   .force-rating {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem; font-weight: 400; margin-bottom: 0.4rem;
-  }
+}
   .force-rating.bad { color: #A33030; }
   .force-rating.mid { color: var(--accent-gold); }
   .force-body { font-size: 11px; color: var(--text-mid); line-height: 1.6; }
@@ -592,7 +606,7 @@
   .qspm-card {
     padding: 1.75rem; border: 0.5px solid var(--border); background: #FAF7F2;
     position: relative; overflow: hidden;
-  }
+}
   .qspm-card.winner { background: var(--accent-green); }
   .qspm-card.winner .qspm-label,
   .qspm-card.winner .qspm-strat { color: rgba(250,247,242,0.75); }
@@ -601,71 +615,71 @@
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--warm-gray); margin-bottom: 0.5rem;
-  }
+}
   .qspm-strat { font-size: 13px; color: var(--text-mid); margin-bottom: 1rem; line-height: 1.5; }
   .qspm-score {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3rem; font-weight: 300; color: var(--accent-green); line-height: 1;
-  }
+}
   .qspm-badge {
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.1em; text-transform: uppercase;
     display: inline-block; padding: 0.3rem 0.6rem;
     background: rgba(250,247,242,0.2);
     color: rgba(250,247,242,0.8); border-radius: 1px; margin-top: 0.75rem;
-  }
+}
 
   /* Supply chain */
   .supply-chain {
     display: flex; align-items: center; gap: 0; margin-top: 1.5rem;
     overflow-x: auto; padding-bottom: 0.5rem;
-  }
+}
   .sc-node {
     flex: 1; min-width: 100px;
     padding: 1.25rem; border: 0.5px solid var(--border);
     background: #FAF7F2; text-align: center;
-  }
+}
   .sc-node-label {
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--accent-gold); margin-bottom: 0.5rem;
-  }
+}
   .sc-node-text { font-size: 11px; color: var(--text-mid); line-height: 1.5; }
   .sc-arrow {
     font-size: 14px; color: var(--border-light); padding: 0 0.5rem; flex-shrink: 0;
-  }
+}
 
   /* Strategic drivers */
   .drivers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 1.5rem; }
   .driver-card {
     padding: 1.5rem; border: 0.5px solid var(--border); background: #FAF7F2;
-  }
+}
   .driver-header {
     display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
-  }
+}
   .driver-tag {
     font-family: 'Space Mono', monospace; font-size: 7px;
     letter-spacing: 0.15em; text-transform: uppercase;
     padding: 0.2rem 0.5rem;
     background: var(--panel-bg); border: 0.5px solid var(--border);
     color: var(--warm-gray); border-radius: 1px;
-  }
+}
   .driver-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem; font-weight: 300;
-  }
+}
   .driver-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
   .driver-sub-title {
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--warm-gray); margin-bottom: 0.4rem;
-  }
+}
   .driver-body-text { font-size: 11.5px; color: var(--text-mid); line-height: 1.65; }
   .driver-future {
     margin-top: 1rem; padding-top: 0.75rem;
     border-top: 0.5px solid var(--border);
     font-size: 11px; color: var(--text-muted); line-height: 1.6;
-  }
+}
 
   /* Skills */
   .skills-section { padding: 6rem 3rem; border-top: 0.5px solid var(--border); }
@@ -673,12 +687,12 @@
   .skill-card {
     background: var(--panel-bg); border: 0.5px solid var(--border);
     padding: 2rem; position: relative; transition: all 0.3s;
-  }
+}
   .skill-card:hover { background: #E8E1D6; border-color: var(--border-light); }
   .skill-card-number {
     font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300;
     color: rgba(28,26,23,0.05); position: absolute; top: 1rem; right: 1rem; line-height: 1;
-  }
+}
   .skill-card-icon { font-size: 1.5rem; margin-bottom: 1.25rem; }
   .skill-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 300; margin-bottom: 0.75rem; }
   .skill-card-desc { font-size: 12px; line-height: 1.7; color: var(--text-mid); }
@@ -690,27 +704,27 @@
     min-height: 70vh; display: flex; align-items: center; justify-content: center;
     padding: 6rem 3rem; border-top: 0.5px solid var(--border);
     position: relative; text-align: center; flex-direction: column;
-  }
+}
   .closing-bg {
     position: absolute; inset: 0;
     display: flex; align-items: center; justify-content: center; overflow: hidden;
-  }
+}
   .closing-big-text {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(8rem, 18vw, 18rem); font-weight: 300;
     color: rgba(28,26,23,0.03); user-select: none; line-height: 1; white-space: nowrap;
-  }
+}
   .closing-content { position: relative; z-index: 1; }
   .closing-eyebrow {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.3em; text-transform: uppercase;
     color: var(--accent-gold); margin-bottom: 2rem;
-  }
+}
   .closing-headline {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(3rem, 6vw, 5rem); font-weight: 300;
     line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 2rem;
-  }
+}
   .closing-headline em { font-style: italic; color: var(--accent-gold); }
   .closing-sub { font-size: 14px; color: var(--text-mid); max-width: 480px; line-height: 1.8; margin: 0 auto; }
   .closing-cta {
@@ -721,47 +735,47 @@
     letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--ink); cursor: pointer; transition: all 0.3s;
     background: transparent; margin-top: 2rem;
-  }
+}
   .closing-cta:hover { background: var(--accent-gold); border-color: var(--accent-gold); color: #FAF7F2; }
 
   /* Footer */
   footer {
     border-top: 0.5px solid var(--border); padding: 2rem 3rem;
     display: flex; justify-content: space-between; align-items: center;
-  }
+}
   .footer-text {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.15em; color: var(--text-muted); text-transform: uppercase;
-  }
+}
   .footer-links { display: flex; gap: 2rem; list-style: none; }
   .footer-links a {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--text-muted); text-decoration: none; transition: color 0.3s;
-  }
+}
   .footer-links a:hover { color: var(--accent-gold); }
 
   /* Animations */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
-  }
+}
   @keyframes rotate {
     from { transform: rotate(0deg); }
     to   { transform: rotate(360deg); }
-  }
+}
   @keyframes scanLine {
     0%   { transform: translateX(-100%); }
     100% { transform: translateX(200%); }
-  }
+}
   @keyframes marquee {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
-  }
+}
   .reveal {
     opacity: 0; transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
-  }
+}
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
   /* Responsive */
@@ -780,7 +794,7 @@
     nav { padding: 1.5rem; }
     .nav-links { display: none; }
     .overview-section, .analysis-section, .skills-section { padding: 4rem 1.5rem; }
-  }
+}
 
   /* ── INTRO / LANDING PAGE ── */
   #intro-page {
@@ -790,55 +804,55 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-  }
+}
   .intro-bg-text {
     position: absolute; bottom: -2rem; left: -1rem;
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(10rem, 22vw, 22rem);
     font-weight: 300; color: rgba(28,26,23,0.04);
     user-select: none; line-height: 1; white-space: nowrap; letter-spacing: -0.03em;
-  }
+}
   .intro-grid-pattern {
     position: absolute; inset: 0; opacity: 0.05;
     background-image:
       linear-gradient(rgba(168,120,42,0.8) 1px, transparent 1px),
       linear-gradient(90deg, rgba(168,120,42,0.8) 1px, transparent 1px);
     background-size: 60px 60px;
-  }
+}
   .intro-top {
     padding: 2.5rem 3rem 0;
     display: flex; justify-content: space-between; align-items: center;
     position: relative; z-index: 2;
-  }
+}
   .intro-logo {
-    font-family: 'Space Mono', monospace; font-size: 11px;
+    font-family: 'Space Mono', monospace; font-size: 14px;
     letter-spacing: 0.2em; color: var(--accent-gold); text-transform: uppercase;
-  }
+}
   .intro-year {
-    font-family: 'Space Mono', monospace; font-size: 10px;
+    font-family: 'Space Mono', monospace; font-size: 14px;
     letter-spacing: 0.2em; color: rgba(168,120,42,0.4); text-transform: uppercase;
-  }
+}
   .intro-hero {
     flex: 1; display: flex; flex-direction: column;
     justify-content: center; padding: 4rem 3rem 2rem;
     position: relative; z-index: 2;
-  }
+}
   .intro-eyebrow {
-    font-family: 'Space Mono', monospace; font-size: 10px;
+    font-family: 'Space Mono', monospace; font-size: 14px;
     letter-spacing: 0.35em; color: var(--accent-gold);
     text-transform: uppercase; margin-bottom: 2rem;
     opacity: 0; animation: fadeUp 0.9s 0.2s forwards;
-  }
+}
   .intro-first-name {
   color: var(--accent-gold)
-  }
+}
   .intro-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(3.5rem, 8vw, 8rem);
     font-weight: 300; line-height: 0.9; letter-spacing: -0.02em;
     color: rgba(250,247,242,0.92);
     opacity: 0; animation: fadeUp 1s 0.4s forwards;
-  }
+}
   .intro-name em { font-style: italic; color: var(--accent-gold); }
   .intro-tagline {
     font-size: 14px; line-height: 1.8; 
@@ -847,38 +861,48 @@
     color:var(--text-mid);
     max-width: 480px; margin-top: 2rem;
     opacity: 0; animation: fadeUp 1s 0.6s forwards;
-  }
+}
 
   /* Project cards row */
   .intro-projects {
     padding: 0 3rem 4rem;
     position: relative; z-index: 2;
     opacity: 0; animation: fadeUp 1s 0.8s forwards;
-  }
+}
   .intro-projects-label {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.3em; color: rgba(168,120,42,0.5);
     text-transform: uppercase; margin-bottom: 1.5rem;
     border-top: 0.5px solid rgba(168,120,42,0.15); padding-top: 1.5rem;
-  }
+}
   .intro-cards {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-  }
-  .intro-card {
-    border: 0.5px solid var(--border) /*rgba(168,120,42,0.12); */
-    padding: 2rem 2rem 1.75rem;
-    cursor: pointer; position: relative; overflow: hidden;
-    transition: all 0.4s ease; text-decoration: none; display: block;
-    background: var(--panel-bg);
-  
-    <!-- rgba(28,26,23,0.4); -->
-  }
-  .intro-card::before {
+}
+
+.intro-card {
+  border: 0.5px solid var(--border); /* rgba(168,120,42,0.12); */
+
+  padding: 2rem 2rem 1.75rem;
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+  text-decoration: none;
+  display: block;
+
+  background: var(--panel-bg);
+}
+
+
+
+.intro-card::before {
     content: ''; position: absolute; inset: 0;
     background: rgba(168,120,42,0.06);
     transform: scaleY(0); transform-origin: bottom;
     transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-  }
+}
   .intro-card:hover::before { transform: scaleY(1); }
   .intro-card:hover { border-color: rgba(168,120,42,0.35); }
   .intro-card-num {
@@ -887,32 +911,32 @@
     color: rgba(168,120,42,0.08); line-height: 1;
     position: absolute; top: 1rem; right: 1.25rem;
     transition: color 0.4s;
-  }
+}
   .intro-card:hover .intro-card-num { color: rgba(168,120,42,0.18); }
   .intro-card-subject {
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--accent-gold); margin-bottom: 0.75rem;
     position: relative; z-index: 1;
-  }
+}
   .intro-card-brand {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem; font-weight: 300; line-height: 1.1;
     color: var(--ink); margin-bottom: 0.75rem;
     position: relative; z-index: 1;
     transition: color 0.4s;
-  }
+}
   .intro-card:hover .intro-card-brand { color: var(--ink); }
   .intro-card-desc {
     font-size: 12px; line-height: 1.7;
     color: var(--text-mid); margin-bottom: 1.5rem;
     position: relative; z-index: 1; transition: color 0.4s;
-  }
+}
   .intro-card:hover .intro-card-desc { color: var(--text-mid); }
   .intro-card-tags {
     display: flex; flex-wrap: wrap; gap: 0.35rem;
     position: relative; z-index: 1;
-  }
+}
   .intro-card-tag {
     font-family: 'Space Mono', monospace; font-size: 7.5px;
     letter-spacing: 0.1em; text-transform: uppercase;
@@ -920,41 +944,58 @@
     border: 0.5px solid rgba(168,120,42,0.18);
     color: rgba(168,120,42,0.5); border-radius: 1px;
     transition: all 0.4s;
-  }
+}
   .intro-card:hover .intro-card-tag {
     border-color: rgba(168,120,42,0.4); color: rgba(168,120,42,0.75);
-  }
+}
   .intro-card-cta {
     margin-top: 1.25rem; display: flex; align-items: center; gap: 0.6rem;
     font-family: 'Space Mono', monospace; font-size: 8px;
     letter-spacing: 0.15em; text-transform: uppercase;
     color: rgba(168,120,42,0.45);
     position: relative; z-index: 1; transition: color 0.4s;
-  }
+}
   .intro-card:hover .intro-card-cta { color: var(--accent-gold); }
   .intro-card-cta-line {
     width: 24px; height: 0.5px; background: currentColor;
     transition: width 0.4s;
-  }
+}
   .intro-card:hover .intro-card-cta-line { width: 40px; }
 
   /* scroll-to-portfolio button */
+
   .intro-enter-btn {
 
-    display: inline-flex; align-items: center; gap: 1rem;
-    margin-top: 2.5rem; padding: 0.9rem 2rem;
-    border: 0.5px solid var(--border-light)
-    font-family: 'Space Mono', monospace; font-size: 9px;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--ink); cursor: pointer;
-    background: transparent; transition: all 0.3s;
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
 
-  }
+  margin-top: 2.5rem;
+  padding: 0.9rem 2rem;
+
+  border: 0.5px solid var(--border-light); /* ✅ FIXED */
+
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: var(--ink);
+  cursor: pointer;
+
+  background: transparent;
+  transition: all 0.3s;
+
+  text-decoration: none;
+}
+
+
+
   .intro-enter-btn:hover {
     border-color: var(--accent-gold); color: #FAF7F2;
     background: var(--accent-gold);
-  }
+}
 
   /* project section separator label */
   .project-label-strip {
@@ -962,24 +1003,24 @@
     display: flex; align-items: center; gap: 2rem;
     border-top: 0.5px solid rgba(168,120,42,0.15);
     border-bottom: 0.5px solid rgba(168,120,42,0.15);
-  }
+}
   .project-label-number {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3.5rem; font-weight: 300;
     color: rgba(168,120,42,0.12); line-height: 1;
     flex-shrink: 0;
-  }
+}
   .project-label-info {}
   .project-label-subject {
     font-family: 'Space Mono', monospace; font-size: 9px;
     letter-spacing: 0.25em; text-transform: uppercase;
     color: rgba(168,120,42,0.5); margin-bottom: 0.4rem;
-  }
+}
   .project-label-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.6rem; font-weight: 300;
     color: rgba(250,247,242,0.85);
-  }
+}
   .project-label-title em { font-style: italic; color: var(--accent-gold); }
 
   @media (max-width: 900px) {
@@ -988,7 +1029,7 @@
     .intro-projects { padding: 0 1.5rem 3rem; }
     .intro-top { padding: 1.5rem; }
     .project-label-strip { padding: 1.5rem; }
-  }
+}
 </style>
 </head>
 <body>
@@ -1004,7 +1045,7 @@
   <div class="intro-bg-text">MFM</div>
 
   <div class="intro-top">
-    <div class="intro-logo">MFM Portfolio · 2025</div>
+    <div class="intro-logo">MFM Portfolio · 2026</div>
     <div class="intro-year">NIFT Gandhinagar</div>
   </div>
 
@@ -1012,7 +1053,7 @@
     <div class="intro-eyebrow">Master of Fashion Management · Portfolio</div>
     <h1 class="intro-name"><span class="intro-first-name">Sanika</span> <br><em>Telharkar</em></h1>
     <p class="intro-tagline">A collection of six academic projects spanning strategic management, luxury brand positioning, integrated marketing communication, digital marketing, and omnichannel retail — each a study in rigorous thinking, creative strategy, and real-world application.</p>
-    <a href="#project-01" class="intro-enter-btn" onclick="smoothTo('project-01')">View Portfolio ↓</a>
+    <a href="#project-06" class="intro-enter-btn" onclick="smoothTo('project-06')">View Portfolio ↓</a>
   </div>
 
   <div class="intro-projects">
@@ -1172,7 +1213,7 @@
 <section class="hero" id="smm-brand" style="background: var(--cream);">
   <div class="hero-left">
     <div class="hero-eyebrow">Social Media Marketing · MFM 2025</div>
-    <h1 class="hero-name">Digital<br><em>Brand</em><br>Launch</h1>
+    <h1 class="hero-name"><em style="font-style:italic; color:var(--accent-gold);">Shuffl India</em><br>Digital<br>Brand</br> Launch</h1>
     <p class="hero-desc">A real-time digital marketing execution for Shuffl India — a handcrafted ethnic footwear start-up. From brand identity and Shopify website to Google Ads, Meta Ads, and regression-based performance forecasting, every layer built from scratch.</p>
     <div class="hero-tags">
       <span class="tag">Brand Creation</span>
@@ -1204,6 +1245,15 @@
     </div>
   </div>
 -->
+
+
+  <div class="hero-right">
+    <div class="hero-logo-container">
+      <img src="images2add/shuffl.png" alt="Hi-Sole Logo">
+    </div>
+  </div>
+
+
 </section>
 
 <!-- Identity strip -->
@@ -1254,7 +1304,7 @@
 <section class="overview-section">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">01 — Brand Overview</div>
+      <div class="section-number">Brand Overview</div>
       <h2 class="section-title">Shuffl India — <em>Crafted to Walk Forward</em></h2>
     </div>
     <div class="section-count">SMM</div>
@@ -1385,7 +1435,7 @@
 <section class="analysis-section">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">02 — Digital Execution</div>
+      <div class="section-number">Digital Execution</div>
       <h2 class="section-title">The <em>Work</em></h2>
     </div>
     <div class="section-count">06</div>
@@ -1840,7 +1890,7 @@
 <section style="min-height:100vh; display:grid; grid-template-columns:1fr 1fr; position:relative; overflow:hidden;" id="imc-brand">
   <div style="padding:10rem 3rem 4rem; display:flex; flex-direction:column; justify-content:flex-end; background:var(--cream);">
     <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.3em; color:var(--accent-gold); text-transform:uppercase; margin-bottom:2rem; opacity:0; animation:fadeUp 1s 0.3s forwards;">IMC · Integrated Marketing Communication · MFM 2025</div>
-    <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(4rem,7vw,7rem); font-weight:300; line-height:0.95; letter-spacing:-0.02em; opacity:0; animation:fadeUp 1s 0.5s forwards;"><em style="font-style:italic; color:var(--accent-gold);">Hi-Sole</em><br>Luxury<br>Footwear</h1>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(4rem,7vw,7rem); font-weight:300; line-height:0.95; letter-spacing:-0.02em; opacity:0; animation:fadeUp 1s 0.5s forwards;"><em style="font-style:italic; color:var(--accent-gold);">Hi-Sole</em><br>Marketing</br>Campaign</h1>
     <p style="margin-top:2.5rem; font-size:14px; line-height:1.8; color:var(--text-mid); max-width:420px; opacity:0; animation:fadeUp 1s 0.7s forwards;">A full Integrated Marketing Communication plan for a premium made-to-measure footwear brand — from brand identity and STP to a 4-week pre-launch campaign, 3-month media plan, state-wise retailer strategy, and omnichannel distribution architecture.</p>
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:2rem; opacity:0; animation:fadeUp 1s 0.9s forwards;">
 <!--
@@ -1860,7 +1910,7 @@
   </div>
   <div style="position:relative; overflow:hidden;">
     <div style="position:absolute; inset:0; background:#261508; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-      <div style="position:absolute; inset:0; opacity:0.06; background-image:linear-gradient(rgba(168,120,42,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(168,120,42,0.8) 1px,transparent 1px); background-size:40px 40px;"></div>
+      <!-- <div style="position:absolute; inset:0; opacity:0.06; background-image:linear-gradient(rgba(168,120,42,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(168,120,42,0.8) 1px,transparent 1px); background-size:40px 40px;"></div>
       <div style="width:300px; height:300px; border-radius:50%; border:1px solid rgba(168,120,42,0.12); position:absolute; animation:rotate 30s linear infinite;"></div>
       <div style="width:460px; height:460px; border-radius:50%; border:0.5px solid rgba(168,120,42,0.07); position:absolute; animation:rotate 45s linear infinite reverse;"></div>
       <div style="font-family:'Cormorant Garamond',serif; font-size:11rem; font-weight:300; color:rgba(168,120,42,0.04); user-select:none; line-height:1; position:absolute; letter-spacing:-0.04em;">HS</div>
@@ -1869,7 +1919,14 @@
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(168,120,42,0.4); text-transform:uppercase; line-height:2;">Walked with Pride.</p>
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(168,120,42,0.4); text-transform:uppercase; line-height:2;">—</p>
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(168,120,42,0.4); text-transform:uppercase; line-height:2;">Delhi · Ahmedabad</p>
-      </div>
+      </div> -->
+      <div style="display:flex; align-items:center; justify-content:center; background:var(--panel-bg);">
+
+  <div class="hero-logo-container">
+    <img src="images2add/hi-sole_logo.png" alt="Brand Logos">
+  </div>
+
+</div>
     </div>
   </div>
 </section>
@@ -1896,7 +1953,7 @@
 <section class="overview-section" id="imc-overview">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">03 — Brand Overview</div>
+      <div class="section-number">Brand Overview</div>
       <h2 class="section-title">Hi-Sole: <em>Step Into Legacy</em></h2>
     </div>
     <div class="section-count">IMC</div>
@@ -1984,7 +2041,7 @@
 <section class="analysis-section" id="imc-analysis">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">03 — IMC Components</div>
+      <div class="section-number">IMC Components</div>
       <h2 class="section-title">The <em>Campaign</em></h2>
     </div>
     <div class="section-count">07</div>
@@ -2252,14 +2309,18 @@
             <li>Live posts and influencer walkthroughs during the event drive real-time social reach</li>
             <li>Giveaways include Hi-Sole shoe care kits and Founder Club Cards with early access perks</li>
           </ul>
+
         </div>
+
+
       </div>
+        <div class="image-full">
+  <img src="images2add/pre_launch.png" alt="Pre Launch Campaign Visual">
+</div>
+
     </div>
   </div>
 
-  <div class="image-block">
-  <img src="images2add/pre_launch.png" alt="Pre Launch Campaign Visual">
-</div>
 
 
   <!-- IMC Card 5: 3-Month Media Planning -->
@@ -2557,7 +2618,7 @@
 <section style="min-height:100vh; display:grid; grid-template-columns:1fr 1fr; position:relative; overflow:hidden;" id="ocb-brand">
   <div style="padding:10rem 3rem 4rem; display:flex; flex-direction:column; justify-content:flex-end; background:var(--cream);">
     <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.3em; color:var(--accent-gold); text-transform:uppercase; margin-bottom:2rem; opacity:0; animation:fadeUp 1s 0.3s forwards;">OCB · Omnichannel Buying & Planning · MFM 2025</div>
-    <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(3.5rem,6vw,6rem); font-weight:300; line-height:0.95; letter-spacing:-0.02em; opacity:0; animation:fadeUp 1s 0.5s forwards;">Stallions<br><em style="font-style:italic; color:var(--accent-gold);">Six Months</em><br>Buying Plan</h1>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(3.5rem,6vw,6rem); font-weight:300; line-height:0.95; letter-spacing:-0.02em; opacity:0; animation:fadeUp 1s 0.5s forwards;"><em style="font-style:italic; color:var(--accent-gold);">Stallions</em><br>Six Months<br>Buying Plan</h1>
     <p style="margin-top:2.5rem; font-size:14px; line-height:1.8; color:var(--text-mid); max-width:420px; opacity:0; animation:fadeUp 1s 0.7s forwards;">A comprehensive six-month merchandise buying plan (Jan–Jun 2025) for Stallions — a hypothetical premium contemporary menswear brand. Built on net sales forecasting, initial markup calculation, seasonal sales distribution, reductions planning, stock-to-sales ratios, and monthly additions to stock. Reference brand: Rare Rabbit.</p>
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:2rem; opacity:0; animation:fadeUp 1s 0.9s forwards;">
       <span class="tag">Net Sales Forecast</span>
@@ -2575,7 +2636,7 @@
   </div>
   <div style="position:relative; overflow:hidden;">
     <div style="position:absolute; inset:0; background:#1C1612; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-      <div style="position:absolute; inset:0; opacity:0.06; background-image:linear-gradient(rgba(168,120,42,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(168,120,42,0.8) 1px,transparent 1px); background-size:40px 40px;"></div>
+      <!-- <div style="position:absolute; inset:0; opacity:0.06; background-image:linear-gradient(rgba(168,120,42,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(168,120,42,0.8) 1px,transparent 1px); background-size:40px 40px;"></div>
       <div style="width:320px; height:320px; border-radius:50%; border:1px solid rgba(168,120,42,0.1); position:absolute; animation:rotate 25s linear infinite;"></div>
       <div style="width:480px; height:480px; border-radius:50%; border:0.5px solid rgba(168,120,42,0.06); position:absolute; animation:rotate 40s linear infinite reverse;"></div>
       <div style="font-family:'Cormorant Garamond',serif; font-size:9rem; font-weight:300; color:rgba(168,120,42,0.05); user-select:none; line-height:1; position:absolute; letter-spacing:-0.04em; text-align:center;">OCB<br>6M</div>
@@ -2584,7 +2645,15 @@
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(168,120,42,0.4); text-transform:uppercase; line-height:2;">Jan – Jun 2025</p>
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(168,120,42,0.4); text-transform:uppercase; line-height:2;">—</p>
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(168,120,42,0.4); text-transform:uppercase; line-height:2;">Premium Menswear · India</p>
-      </div>
+      </div> -->
+      <div style="display:flex; align-items:center; justify-content:center; background:var(--panel-bg);">
+
+  <div class="hero-logo-container">
+    <img src="images2add/3.png" alt="Brand Logos">
+  </div>
+
+</div>
+
     </div>
   </div>
 </section>
@@ -2611,7 +2680,7 @@
 <section class="overview-section" id="ocb-overview">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">05 — Brand Overview</div>
+      <div class="section-number">Brand Overview</div>
       <h2 class="section-title">Meet <em>Stallions</em></h2>
     </div>
   </div>
@@ -2703,7 +2772,7 @@
 <section class="analysis-section" id="ocb-analysis">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">05 — Six-Month Buying Plan</div>
+      <div class="section-number">Six-Month Buying Plan</div>
       <h2 class="section-title">The <em>Numbers</em></h2>
     </div>
     <div class="section-count">6M</div>
@@ -2921,7 +2990,7 @@
 <section class="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">DTSM · Strategic Management · MFM 2025</div>
-    <h1 class="hero-name">Strategic<br><em>Analysis</em><br>& Planning</h1>
+    <h1 class="hero-name"><em style="font-style:italic; color:var(--accent-gold);">Radhe Prem ni Mithas</em><br>Strategic Analysis<br>& Planning</h1>
     <p class="hero-desc">A comprehensive strategic management study of Radhe Prem ni Mithaas — a heritage Indian sweets brand from Gandhinagar, Gujarat. From external forces to strategic choice, every framework applied, interpreted, and actioned.</p>
     <div class="hero-tags">
       <span class="tag">PESTLE</span>
@@ -2939,7 +3008,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-logo-container">
-      <img src="images2add/radhe_logo.png" alt="Hi-Sole Logo">
+      <img src="images2add/radhe_logo.png" alt="Radhe Prem ni Mithas">
     </div>
   </div>
 </section>
@@ -3078,7 +3147,7 @@
 <section class="analysis-section" id="analysis">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">01 — Strategic Frameworks</div>
+      <div class="section-number">Strategic Frameworks</div>
       <h2 class="section-title">The <em>Analysis</em></h2>
     </div>
     <div class="section-count">10</div>
@@ -3762,7 +3831,7 @@
   </div>
   <div style="position:relative; overflow:hidden;">
     <div style="position:absolute; inset:0; background:#050E0D; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-      <div style="position:absolute; inset:0; opacity:0.05; background-image:linear-gradient(rgba(168,120,42,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(168,120,42,0.8) 1px,transparent 1px); background-size:40px 40px;"></div>
+      <!-- <div style="position:absolute; inset:0; opacity:0.05; background-image:linear-gradient(rgba(168,120,42,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(168,120,42,0.8) 1px,transparent 1px); background-size:40px 40px;"></div>
       <div style="width:350px; height:350px; border-radius:50%; border:1px solid rgba(168,120,42,0.1); position:absolute; animation:rotate 28s linear infinite;"></div>
       <div style="width:500px; height:500px; border-radius:50%; border:0.5px solid rgba(168,120,42,0.06); position:absolute; animation:rotate 42s linear infinite reverse;"></div>
       <div style="font-family:'Cormorant Garamond',serif; font-size:9rem; font-weight:300; color:rgba(168,120,42,0.04); user-select:none; line-height:1; position:absolute; letter-spacing:-0.04em; text-align:center;">CB<br>OCM</div>
@@ -3771,7 +3840,16 @@
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(168,120,42,0.4); text-transform:uppercase; line-height:2;">Spectalook</p>
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(168,120,42,0.4); text-transform:uppercase; line-height:2;">—</p>
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(168,120,42,0.4); text-transform:uppercase; line-height:2;">Gandhinagar, India</p>
-      </div>
+      </div> -->
+
+      <div style="display:flex; align-items:center; justify-content:center; background:var(--panel-bg);">
+
+  <div class="hero-logo-container">
+    <img src="images2add/vs.png" alt="Brand Logos">
+  </div>
+
+</div>
+
     </div>
   </div>
 </section>
@@ -3798,7 +3876,7 @@
 <section class="overview-section" id="cb-overview">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">04 — Study Overview</div>
+      <div class="section-number">Study Overview</div>
       <h2 class="section-title">Three Brands, <em>One Lens</em></h2>
     </div>
     <div class="section-count">CB</div>
@@ -3880,7 +3958,7 @@
 <section class="analysis-section" id="cb-analysis">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">04 — Gap Analysis & Strategies</div>
+      <div class="section-number">Gap Analysis & Strategies</div>
       <h2 class="section-title">The <em>Findings</em></h2>
     </div>
     <div class="section-count">12</div>
@@ -4380,7 +4458,7 @@
 <section style="min-height:100vh; display:grid; grid-template-columns:1fr 1fr; position:relative; overflow:hidden;" id="lbm-brand">
   <div style="padding:10rem 3rem 4rem; display:flex; flex-direction:column; justify-content:flex-end; position:relative; background:var(--cream);">
     <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.3em; color:var(--accent-gold); text-transform:uppercase; margin-bottom:2rem; opacity:0; animation:fadeUp 1s 0.3s forwards;">LBM · Luxury Brand Management · MFM 2025</div>
-    <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(4rem,7vw,7rem); font-weight:300; line-height:0.95; letter-spacing:-0.02em; opacity:0; animation:fadeUp 1s 0.5s forwards;">Global &amp;<br><em style="font-style:italic; color:var(--accent-gold);">Indian</em><br>Luxury</h1>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(4rem,7vw,7rem); font-weight:300; line-height:0.95; letter-spacing:-0.02em; opacity:0; animation:fadeUp 1s 0.5s forwards;"><em style="font-style:italic; color:var(--accent-gold);">Ruffoni </em> vs <br><em style="font-style:italic; color:var(--accent-gold);">PTAL </em><br>Luxury Strategy </br>Study</h1>
     <p style="margin-top:2.5rem; font-size:14px; line-height:1.8; color:var(--text-mid); max-width:420px; opacity:0; animation:fadeUp 1s 0.7s forwards;">A comparative luxury strategy study benchmarking the Italian luxury kitchenware market (Ruffoni) against the Indian emerging luxury ecosystem (PTAL) — developing a strategic brand roadmap for PTAL to enter the luxury segment with a "Made in India" identity.</p>
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:2rem; opacity:0; animation:fadeUp 1s 0.9s forwards;">
       <span class="tag">Porter's Diamond</span>
@@ -4400,7 +4478,7 @@
     <div style="position:absolute; inset:0; background:#1A1208; display:flex; align-items:center; justify-content:center; overflow:hidden;">
       <div style="position:absolute; inset:0; opacity:0.08; background-image:linear-gradient(rgba(212,168,75,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(212,168,75,0.6) 1px,transparent 1px); background-size:40px 40px;"></div>
       <!-- Concentric rings -->
-      <div style="width:320px; height:320px; border-radius:50%; border:1px solid rgba(212,168,75,0.15); position:absolute; animation:rotate 25s linear infinite;"></div>
+      <!-- <div style="width:320px; height:320px; border-radius:50%; border:1px solid rgba(212,168,75,0.15); position:absolute; animation:rotate 25s linear infinite;"></div>
       <div style="width:480px; height:480px; border-radius:50%; border:0.5px solid rgba(212,168,75,0.08); position:absolute; animation:rotate 40s linear infinite reverse;"></div>
       <div style="width:180px; height:180px; border-radius:50%; border:1px solid rgba(212,168,75,0.2); position:absolute; animation:rotate 15s linear infinite;"></div>
       <div style="font-family:'Cormorant Garamond',serif; font-size:10rem; font-weight:300; color:rgba(212,168,75,0.05); user-select:none; line-height:1; position:absolute;">L</div>
@@ -4409,7 +4487,15 @@
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(212,168,75,0.5); text-transform:uppercase; line-height:2;">PTAL · New Delhi</p>
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(212,168,75,0.5); text-transform:uppercase; line-height:2;">—</p>
         <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(212,168,75,0.5); text-transform:uppercase; line-height:2;">Italian × Indian Luxury</p>
-      </div>
+      </div> -->
+      <div style="display:flex; align-items:center; justify-content:center; background:var(--panel-bg);">
+
+  <div class="hero-logo-container">
+    <img src="images2add/1.png" alt="Brand Logos">
+  </div>
+
+</div>
+
     </div>
   </div>
 </section>
@@ -4436,7 +4522,7 @@
 <section class="overview-section" id="lbm-overview">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">02 — Brand Overview</div>
+      <div class="section-number">Brand Overview</div>
       <h2 class="section-title">Two Brands, <em>One Vision</em></h2>
     </div>
     <div class="section-count">LBM</div>
@@ -4525,7 +4611,7 @@
 <section class="analysis-section" id="lbm-analysis">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">02 — Frameworks & Strategy</div>
+      <div class="section-number">Frameworks & Strategy</div>
       <h2 class="section-title">The <em>Analysis</em></h2>
     </div>
     <div class="section-count">07</div>
@@ -5070,53 +5156,75 @@
   </div>
 </section>
 
+<section>
+
+<!-- Project 02 separator -->
+<div class="project-label-strip" id="project-03">
+  <div class="project-label-number"></div>
+  <div class="project-label-info">
+    <div class="project-label-subject"></div>
+    <div class="project-label-title"><!-- Hi-Sole — <em>Luxury Footwear</em> IMC Plan</div> -->
+  </div>
+</div>
+</section>
+<section>
+
+<!-- Project 02 separator -->
+<div class="project-label-strip" id="project-03">
+  <div class="project-label-number"></div>
+  <div class="project-label-info">
+    <div class="project-label-subject"></div>
+    <div class="project-label-title"><!-- Hi-Sole — <em>Luxury Footwear</em> IMC Plan</div> -->
+  </div>
+</div>
+</section>
 
 <!-- Skills section -->
 <section class="skills-section" id="strategy">
   <div class="section-header reveal">
     <div>
-      <div class="section-number">04 — Competencies Demonstrated</div>
+      <div class="section-number">Competencies Demonstrated</div>
       <h2 class="section-title">Skills <em>Applied</em></h2>
     </div>
   </div>
   <div class="skills-grid" style="grid-template-columns: repeat(6, 1fr);">
     <div class="skill-card reveal">
-      <div class="skill-card-number">01</div>
+      <div class="skill-card-number"></div>
       <div class="skill-card-icon">◉</div>
       <div class="skill-card-title">Strategic Analysis</div>
       <p class="skill-card-desc">Application of 10+ strategic frameworks — from PESTLE and Porter's to SPACE and QSPM — generating real, weighted, and interpreted strategic recommendations for heritage Indian brands.</p>
       <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
     </div>
     <div class="skill-card reveal" style="transition-delay:0.1s">
-      <div class="skill-card-number">02</div>
+      <div class="skill-card-number"></div>
       <div class="skill-card-icon">◈</div>
       <div class="skill-card-title">Luxury Brand Management</div>
       <p class="skill-card-desc">Comparative luxury strategy across Italian and Indian markets — Porter's Diamond, Kapferer's Identity Prism, tiered brand architecture, and luxury positioning for emerging market brands.</p>
       <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
     </div>
     <div class="skill-card reveal" style="transition-delay:0.2s">
-      <div class="skill-card-number">03</div>
+      <div class="skill-card-number"></div>
       <div class="skill-card-icon">◫</div>
       <div class="skill-card-title">Consumer Behaviour</div>
       <p class="skill-card-desc">Primary consumer research design — surveys, Likert scales, NPS, and retail observation across competitive brand sets. Gap analysis and neuromarketing insights to inform strategic retail recommendations.</p>
       <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
     </div>
     <div class="skill-card reveal" style="transition-delay:0.3s">
-      <div class="skill-card-number">04</div>
+      <div class="skill-card-number"></div>
       <div class="skill-card-icon">◐</div>
       <div class="skill-card-title">Omnichannel Retail</div>
       <p class="skill-card-desc">End-to-end omnichannel retail strategy — store layout analysis, VM benchmarking, digital experience audits, quick commerce positioning, and data-driven personalisation frameworks.</p>
       <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
     </div>
     <div class="skill-card reveal" style="transition-delay:0.4s">
-      <div class="skill-card-number">05</div>
+      <div class="skill-card-number"></div>
       <div class="skill-card-icon">◑</div>
       <div class="skill-card-title">Merchandise Planning</div>
       <p class="skill-card-desc">Six-month buying plan construction — net sales forecasting, IMU calculation, seasonal distribution, reductions planning, stock-to-sales ratios, BOM/EOM inventory levels, and open-to-buy management.</p>
       <div class="skill-bar"><div class="skill-bar-fill" style="width:84%"></div></div>
     </div>
     <div class="skill-card reveal" style="transition-delay:0.5s">
-      <div class="skill-card-number">06</div>
+      <div class="skill-card-number"></div>
       <div class="skill-card-icon">◎</div>
       <div class="skill-card-title">Digital Marketing</div>
       <p class="skill-card-desc">Live execution of Google Ads, Meta Ads, and Instagram campaigns — with UX-informed website building, performance analytics via Google Analytics, and regression-based traffic forecasting for start-up brands.</p>
@@ -5131,7 +5239,7 @@
     <div class="closing-big-text">STRATEGY</div>
   </div>
   <div class="closing-content">
-    <div class="closing-eyebrow">06 — Let's Connect</div>
+    <div class="closing-eyebrow">Let's Connect</div>
     <h2 class="closing-headline">Open to Opportunities<br>in <em>Fashion &amp; E-Commerce</em></h2>
     <p class="closing-sub">Seeking roles in brand management, retail strategy, luxury positioning, or fashion marketing where analytical rigour meets creative and commercial ambition.</p>
     <button class="closing-cta" onclick="window.location.href='mailto:sanika.telharkar@nift.ac.insubject=Portfolio Enquiry'">Email: sanika.telharkar @ nift.ac.in ↗</button>
@@ -5174,7 +5282,7 @@
     const el = document.getElementById(id);
     if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     return false;
-  }
+}
 
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
@@ -5184,7 +5292,7 @@
     mouseX = e.clientX; mouseY = e.clientY;
     cursor.style.left = mouseX - 4 + 'px';
     cursor.style.top  = mouseY - 4 + 'px';
-  });
+});
 
   function animateRing() {
     ringX += (mouseX - ringX) * 0.12;
@@ -5192,7 +5300,7 @@
     ring.style.left = ringX - 16 + 'px';
     ring.style.top  = ringY - 16 + 'px';
     requestAnimationFrame(animateRing);
-  }
+}
   animateRing();
 
   document.querySelectorAll('a, button, .analysis-card').forEach(el => {
@@ -5200,20 +5308,20 @@
       cursor.style.transform = 'scale(2.5)';
       ring.style.transform = 'scale(1.5)';
       ring.style.borderColor = 'rgba(168,120,42,0.8)';
-    });
+  });
     el.addEventListener('mouseleave', () => {
       cursor.style.transform = 'scale(1)';
       ring.style.transform = 'scale(1)';
       ring.style.borderColor = 'rgba(168,120,42,0.4)';
-    });
   });
+});
 
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.08 });
+  });
+}, { threshold: 0.08 });
   reveals.forEach(el => observer.observe(el));
 
   function toggleDetail(id, card) {
@@ -5223,8 +5331,8 @@
     if (!isOpen) {
       detail.classList.add('open');
       setTimeout(() => detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
-    }
   }
+}
 
   const skillBars = document.querySelectorAll('.skill-bar-fill');
   const barObs = new IntersectionObserver(entries => {
@@ -5234,9 +5342,9 @@
         fill.style.width = '0%';
         setTimeout(() => { fill.style.transition = 'width 1s ease'; fill.style.width = target; }, 100);
         barObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
+    }
+  });
+}, { threshold: 0.5 });
   skillBars.forEach(b => barObs.observe(b));
 </script>
 </body>
