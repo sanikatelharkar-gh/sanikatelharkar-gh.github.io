@@ -1249,7 +1249,7 @@
 
   <div class="hero-right">
     <div class="hero-logo-container">
-      <img src="images2add/shuffl.png" alt="Hi-Sole Logo">
+      <img src="./images2add/shuffl.png" alt="Hi-Sole Logo">
     </div>
   </div>
 
@@ -1442,7 +1442,7 @@
   </div>
 
   <div class="image-block">
-  <img src="images2add/business_blue_print.png" alt="Pre Launch Campaign Visual">
+  <img src="./images2add/business_blue_print.png" alt="Pre Launch Campaign Visual">
 </div>
 
   <!-- Card A: Competitor Analysis -->
@@ -1723,7 +1723,7 @@
           </ul>
           
           <div class="image-full">
-            <img src="images2add/analytics_graph.png" alt="Pre Launch Campaign Visual">
+            <img src="./images2add/analytics_graph.png" alt="Pre Launch Campaign Visual">
           </div>
 
           <div class="detail-section-label" style="margin-top:1.5rem;">Google Analytics Browser Insights</div>
@@ -1736,15 +1736,15 @@
           </ul>
 
           <div class="image-full">
-            <img src="images2add/google_analytics/31.png" alt="Pre Launch Campaign Visual">
+            <img src="./images2add/google_analytics/31.png" alt="Pre Launch Campaign Visual">
           </div>
 
           <div class="image-full">
-            <img src="images2add/google_analytics/32.png" alt="Pre Launch Campaign Visual">
+            <img src="./images2add/google_analytics/32.png" alt="Pre Launch Campaign Visual">
           </div>
 
           <div class="image-full">
-            <img src="images2add/google_analytics/33.png" alt="Pre Launch Campaign Visual">
+            <img src="./images2add/google_analytics/33.png" alt="Pre Launch Campaign Visual">
           </div>
 
           <div class="detail-section-label" style="margin-top:1.5rem;">Simple Regression Model</div>
@@ -1923,7 +1923,7 @@
       <div style="display:flex; align-items:center; justify-content:center; background:var(--panel-bg);">
 
   <div class="hero-logo-container">
-    <img src="images2add/hi-sole_logo.png" alt="Brand Logos">
+    <img src="./images2add/hi-sole_logo.png" alt="Brand Logos">
   </div>
 
 </div>
@@ -2315,7 +2315,7 @@
 
       </div>
         <div class="image-full">
-  <img src="images2add/pre_launch.png" alt="Pre Launch Campaign Visual">
+  <img src="./images2add/pre_launch.png" alt="Pre Launch Campaign Visual">
 </div>
 
     </div>
@@ -2360,7 +2360,7 @@
         </div>
           <!--   
             <div class="image-block">
-              <img src="images/pre-launch-campaign.jpg" alt="Pre Launch Campaign Visual">
+              <img src="./images/pre-launch-campaign.jpg" alt="Pre Launch Campaign Visual">
             </div>
           -->
 
@@ -2386,7 +2386,7 @@
         </div>
           <!--
             <div class="image-block">
-              <img src="images2add/months123/25.png" alt="Pre Launch Campaign Visual">
+              <img src="./images2add/months123/25.png" alt="Pre Launch Campaign Visual">
             </div>
           -->
 
@@ -2411,7 +2411,7 @@
         </div>
           <!--
           <div class="image-block">
-            <img src="images2add/months123/26.png" alt="Pre Launch Campaign Visual">
+            <img src="./images2add/months123/26.png" alt="Pre Launch Campaign Visual">
           </div>
         -->
       </div>
@@ -2649,7 +2649,7 @@
       <div style="display:flex; align-items:center; justify-content:center; background:var(--panel-bg);">
 
   <div class="hero-logo-container">
-    <img src="images2add/3.png" alt="Brand Logos">
+    <img src="./images2add/3.png" alt="Brand Logos">
   </div>
 
 </div>
@@ -2946,7 +2946,7 @@
 </section>
 
   <div class="image-block">
-    <img src="images2add/six_month_buying_plan.png" alt="Pre Launch Campaign Visual">
+    <img src="./images2add/six_month_buying_plan.png" alt="Pre Launch Campaign Visual">
   </div>
 
 <br>
@@ -3008,7 +3008,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-logo-container">
-      <img src="images2add/radhe_logo.png" alt="Radhe Prem ni Mithas">
+      <img src="./images2add/radhe_logo.png" alt="Radhe Prem ni Mithas">
     </div>
   </div>
 </section>
@@ -3536,7 +3536,7 @@
           </ul>
 
         <div class="image-full">
-          <img src="images2add/space_matrix.png" alt="Project Visual">
+          <img src="./images2add/space_matrix.png" alt="Project Visual">
         </div>
       </div>
 
@@ -3845,7 +3845,7 @@
       <div style="display:flex; align-items:center; justify-content:center; background:var(--panel-bg);">
 
   <div class="hero-logo-container">
-    <img src="images2add/vs.png" alt="Brand Logos">
+    <img src="./images2add/vs.png" alt="Brand Logos">
   </div>
 
 </div>
@@ -4491,7 +4491,7 @@
       <div style="display:flex; align-items:center; justify-content:center; background:var(--panel-bg);">
 
   <div class="hero-logo-container">
-    <img src="images2add/1.png" alt="Brand Logos">
+    <img src="./images2add/1.png" alt="Brand Logos">
   </div>
 
 </div>
@@ -5347,5 +5347,17 @@
 }, { threshold: 0.5 });
   skillBars.forEach(b => barObs.observe(b));
 </script>
+<script>
+function smoothTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+}
+
+function toggleDetail(id, el) {
+  const detail = document.getElementById(id);
+  if (detail) detail.classList.toggle("open");
+}
+</script>
+
 </body>
 </html>
